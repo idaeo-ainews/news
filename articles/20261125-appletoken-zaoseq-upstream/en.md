@@ -19,16 +19,16 @@ Archive type: structured data from an issuer announcement. Issuer: 株式会社�
 
 Limited-time 20% off: from November 27 to November 30, 23:59, DeepSeek V4 Flash and both Qwen3.8 27B builds are 20% off. During that window the catalog price (USD per million tokens) is 0.173 input / 0.354 output for DeepSeek V4 Flash and 0.189 input / 1.259 output for Qwen3.8 27B.
 
-All six showed status active / normal on 2026-11-28. Qwen3.8 27B comes in FP8 and NVFP4 builds (NVFP4 added after the 11-25 launch) at the same price, so no price comparison is made.
+All six showed status active / normal on 2026-11-28. Qwen3.8 27B comes in FP8 and NVFP4 builds (NVFP4 added after the 11-25 launch) at the same price. Their names differ from other versions in the catalog, so no price comparison is made.
 
 ## Specs
-- Both chat models: output limit 8,192 tokens, default 2,048.
+- Chat models: output limit 8,192 tokens, default 2,048.
 - Qwen3-ASR: `POST /v2/audio/transcriptions`.
 - FLUX.2 klein 4B: 512×512, 768×768, 1024×1024; 1 image per request; up to 4 input images; seed supported; no watermark.
 - MiniMax H3: 352p, 480p, 720p, 768p, 1080p, 1440p; 16:9 and 9:16; audio always included; 5 to 15 seconds (1080p and 1440p up to 10 seconds); up to 3 reference images; quality levels currently open: light, medium.
 
 ## Capacity rules
-- 16 concurrent requests and 300 requests per minute per key. Video shares the "16 concurrent" limit with other requests.
+- 16 concurrent requests and 300 requests per minute per key (4 and 60 at the 2026-11-25 launch). Video shares the "16 concurrent" limit with other requests, with at most 3 videos at a time.
 - Chat, image, speech to text: queued on the same connection for up to about 60 seconds; if no slot opens, 429 with Retry-After (retryable, no credits deducted); nothing is quoted or frozen while waiting.
 - Video: queued as a task (queued) for up to 60 minutes; on timeout, failed (upstream_busy) and the full frozen amount is refunded.
 
@@ -42,7 +42,7 @@ All six showed status active / normal on 2026-11-28. Qwen3.8 27B comes in FP8 an
 
 ## Sources and limits
 - AppleToken changelog API v2.65; model catalog GET /v2/models (read on 2026-11-25 and 2026-11-28); AppleToken docs.
-- Prices change; the live catalog is authoritative. About ZaoSeq, only "an inference upstream based in Taiwan" is stated.
+- Prices change; the live catalog is authoritative.
 
 Human-readable source: https://km.idaeo.ai/post/ai/appletoken-zaoseq-upstream-20261125?lang=en&utm_source=github_news&utm_medium=article&utm_campaign=zaoseq-launch&utm_content=ZSQ-github_news-en
 
