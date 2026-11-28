@@ -7,15 +7,17 @@
 - 上游公司：造序科技有限公司（ZaoSeq Technologies Co., Ltd.），2026-10-08 新北市設立；官網 https://zaoseq.com ，GPU 算力服務 https://compute.zaoseq.com
 - 指定方式：model 寫 `zaoseq/<模型>`。只在指名時使用，不參與 `auto/` 自動選路。
 
-## 模型表（11 月 28 日目錄，美元）
+## 模型表（11 月 25 日目錄，美元）
 | model | 類型 | 單價 |
 |---|---|---|
-| `zaoseq/qwen3.8-27b-fp8` | 對話 | 每百萬 token 輸入 0.189、輸出 1.259 |
-| `zaoseq/qwen3.8-27b-nvfp4` | 對話 | 每百萬 token 輸入 0.189、輸出 1.259 |
-| `zaoseq/deepseek-v4-flash-0731` | 對話 | 每百萬 token 輸入 0.173、輸出 0.354 |
+| `zaoseq/qwen3.8-27b-fp8` | 對話 | 每百萬 token 輸入 0.236、輸出 1.574 |
+| `zaoseq/qwen3.8-27b-nvfp4` | 對話 | 每百萬 token 輸入 0.236、輸出 1.574 |
+| `zaoseq/deepseek-v4-flash-0731` | 對話 | 每百萬 token 輸入 0.216、輸出 0.443 |
 | `zaoseq/qwen3-asr` | 語音轉文字 | 每秒音訊 0.00003（約每小時 0.108） |
 | `zaoseq/flux-2-klein-4b` | 文字生圖 | 每張 0.0045 |
 | `zaoseq/minimax-h3` | 影片 | 每秒影片 0.0068 起，最高 0.0837 |
+
+限時 8 折：11 月 27 日至 11 月 30 日 23:59，DeepSeek V4 Flash 與兩個版本的 Qwen3.8 27B 打 8 折。期間內目錄單價（美元，每百萬 token）：DeepSeek V4 Flash 輸入 0.173、輸出 0.354；Qwen3.8 27B 輸入 0.189、輸出 1.259。
 
 六個模型 2026-11-28 狀態皆 active／normal。Qwen3.8 27B 有 FP8 與 NVFP4 兩版（NVFP4 在 11-25 上架後加入），兩者同價，不做價格比較。
 
@@ -30,8 +32,8 @@
 - 對話、圖片、語音轉文字：同一條連線排隊，最長約 60 秒；輪不到回 429（帶 Retry-After，可重試，不扣點）；排隊期間不報價、不凍結點數。
 - 影片：照任務排隊（queued），最長 60 分鐘；逾時 failed（upstream_busy），凍結額度全數退回。
 
-## 目錄內比較（11 月 28 日目錄）
-- DeepSeek V4 Flash 經造序，輸出每百萬 token 0.354 美元，是目錄中提供該模型的三個上游裡最低的。
+## 目錄內比較（11 月 25 日目錄）
+- DeepSeek V4 Flash 經造序，輸出每百萬 token 0.443 美元，是目錄中提供該模型的三個上游裡最低的。
 
 ## MiniMax H3 產品條件（MiniMax H3 Community License，照原文列出）
 - 不提供給歐盟、英國、韓國、美國的使用者。
