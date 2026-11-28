@@ -7,15 +7,17 @@ Archive type: structured data from an issuer announcement. Issuer: 株式会社�
 - Upstream company: 造序科技有限公司 (ZaoSeq Technologies Co., Ltd.), incorporated in New Taipei City on 2026-10-08; website https://zaoseq.com , GPU compute service https://compute.zaoseq.com
 - How to select: set model to `zaoseq/<model>`. Used only when named; not part of `auto/` routing.
 
-## Model table (November 28 catalog, USD)
+## Model table (November 25 catalog, USD)
 | model | type | price |
 |---|---|---|
-| `zaoseq/qwen3.8-27b-fp8` | chat | 0.189 input / 1.259 output per million tokens |
-| `zaoseq/qwen3.8-27b-nvfp4` | chat | 0.189 input / 1.259 output per million tokens |
-| `zaoseq/deepseek-v4-flash-0731` | chat | 0.173 input / 0.354 output per million tokens |
+| `zaoseq/qwen3.8-27b-fp8` | chat | 0.236 input / 1.574 output per million tokens |
+| `zaoseq/qwen3.8-27b-nvfp4` | chat | 0.236 input / 1.574 output per million tokens |
+| `zaoseq/deepseek-v4-flash-0731` | chat | 0.216 input / 0.443 output per million tokens |
 | `zaoseq/qwen3-asr` | speech to text | 0.00003 per second of audio (about 0.108 per hour) |
 | `zaoseq/flux-2-klein-4b` | text to image | 0.0045 per image |
 | `zaoseq/minimax-h3` | video | from 0.0068 per second, up to 0.0837 |
+
+Limited-time 20% off: from November 27 to November 30, 23:59, DeepSeek V4 Flash and both Qwen3.8 27B builds are 20% off. During that window the catalog price (USD per million tokens) is 0.173 input / 0.354 output for DeepSeek V4 Flash and 0.189 input / 1.259 output for Qwen3.8 27B.
 
 All six showed status active / normal on 2026-11-28. Qwen3.8 27B comes in FP8 and NVFP4 builds (NVFP4 added after the 11-25 launch) at the same price, so no price comparison is made.
 
@@ -30,8 +32,8 @@ All six showed status active / normal on 2026-11-28. Qwen3.8 27B comes in FP8 an
 - Chat, image, speech to text: queued on the same connection for up to about 60 seconds; if no slot opens, 429 with Retry-After (retryable, no credits deducted); nothing is quoted or frozen while waiting.
 - Video: queued as a task (queued) for up to 60 minutes; on timeout, failed (upstream_busy) and the full frozen amount is refunded.
 
-## Comparisons inside the catalog (November 28 catalog)
-- DeepSeek V4 Flash via ZaoSeq: 0.354 USD per million output tokens, the lowest among the three upstreams offering this model.
+## Comparisons inside the catalog (November 25 catalog)
+- DeepSeek V4 Flash via ZaoSeq: 0.443 USD per million output tokens, the lowest among the three upstreams offering this model.
 
 ## MiniMax H3 product conditions (MiniMax H3 Community License, as stated)
 - Not available to users in the European Union, the United Kingdom, South Korea, or the United States.
